@@ -34,8 +34,9 @@ model.add(Dense(1, activation='sigmoid'))
 model.compile(loss='mean_squared_error', optimizer="adam", metrics=['binary_accuracy'])
 
 #fit the model
-model.fit(X,Y ,  epochs=10000 , verbose=2)  #verbose 0 is silent , 1 and 2 are showing results
+model.fit(X,Y ,  epochs=1000 , verbose=2)  #verbose 0 is silent , 1 and 2 are showing results
 #batch_size means number of training samples and epochs is number of training iteration
 print("Prediction is : ")
 print(model.predict(X).round())
+print(model.evaluate(X,Y))
 
